@@ -1,0 +1,88 @@
+.principal__login{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.principal-section__login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--rosa-queimado);
+    padding: 3.5em 3em;
+    width: 80vw;
+    border-radius: 8px;
+}
+
+.principal__login-titulo{
+    height: 110px;
+}
+
+.principal__login-titulo h1{
+    font-size: 35px;
+    line-height: 1.2em;
+}
+
+.principal__login-titulo span{
+    color: #450505;
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.principal__login-titulo img{
+    position: relative;
+    left: 130px;
+    top: -40%;
+    width: 2.6em;
+}
+
+.login-subtitulo{
+    color: var(--branco);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.login-input{
+    border-radius: 3px;
+    background-color: var(--rosa-claro);
+    margin-bottom: 24px;
+    height: 30px;
+    transition: 500ms;
+    padding-left: 10px;
+}
+
+.login-input:focus, .login-input:hover{
+    outline: 1px var(--rosa-escuro) solid;
+    height: 35px;
+}
+
+input[type="submit"]{
+    outline: none;
+    align-self: flex-end;
+    padding: .3em 1.3em;
+    border-radius: 5px;
+    color: var(--branco);
+    background-color: var(--cor-background);
+    font-weight: 300;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus{
+    padding: .3em 2em .3em 2em;
+    background-color: var(--rosa-escuro);
+}
+
+/* MEDIA: */
+@media only screen and (min-width: 630px) {
+    .principal-section__login{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    label[for="login-email"]{
+        margin-top: 24px;
+    }    
+}

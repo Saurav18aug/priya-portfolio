@@ -1,0 +1,167 @@
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .3);
+}
+
+.principal__modal {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: var(--rosa-queimado);
+    border-radius: 8px;
+    outline: none;
+}
+
+.modal-fechar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+}
+
+/* MODAL EXIBINDO: */
+.modal__exibindo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal__exibindo-informacoes {
+    margin: 16px 20px;
+}
+
+.modal__exibindo-informacoes-item h3{
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.item-titulo {
+    margin-bottom: 16px;
+}
+
+.item-titulo p, .categorias-obra {
+    background-color: var(--rosa-claro);
+    padding: 10px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+.categoria .categoria-tag {
+    display: inline-block;
+    margin: 0 8px 5px 0;
+    padding: 3px 15px;
+    background-color: var(--rosa-queimado);
+    border-radius: 5px;
+}
+
+/* MODAL INSERINDO */
+.modal__picture-container {
+    width: 85%;
+    height: 350px; 
+    z-index: 2;
+    margin: 7.5% 7.5% 0 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    text-align: center;
+    background: url(../img/inserir-img.svg) no-repeat 50% 30%;
+    color: var(--cinza-escuro);
+    background-color: var(--cinza-claro);
+    border: dashed currentColor 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+    position: relative;
+}
+
+.modal__picture-container span {
+    font-size: 32px;
+    padding: 5%;
+    padding-bottom: 25%;
+}
+
+.modal__picture-container:hover, .modal__picture-container:focus {
+    color: var(--rosa-escuro);
+    background-color: var(--rosa-claro);
+}
+
+.modal__picture-container span img {
+    width: 100%;
+}
+
+.modal__input-titulo, .modal__input-categoria {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: var(--rosa-claro);
+    font-size: 17px;
+}
+
+.modal__input-titulo::placeholder, .modal__input-categoria::placeholder {
+    font-weight: 450;
+} 
+
+.modal__btn-inserir {
+    display: flex;
+    justify-content: end;
+    margin-top: 16px;
+}
+
+.modal__btn-inserir button{
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    font-weight: 300;
+    font-size: 17.5px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* MEDIA: */
+@media only screen and (min-width: 500px) {
+    .principal__modal{
+        width: 75%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .principal__modal{
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .modal__exibindo-informacoes {
+        width: 55%;
+        margin-top: 56px;
+    }
+
+    .modal__picture-container {
+        margin: 7.5%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .principal__modal{
+        flex-direction: row;
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .principal__modal{
+        flex-direction: row;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .principal__modal{
+        flex-direction: row;
+        width: 40%;
+    }
+}

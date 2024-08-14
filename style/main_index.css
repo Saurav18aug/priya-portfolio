@@ -1,0 +1,182 @@
+.principal {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.principal__titulo {
+    text-align: center;
+    color: var(--branco);
+    margin-bottom: 56px;
+}
+
+.principal__nome-artistico {
+    font-size: 35px;
+}
+
+.principal__nome-artista {
+    font-size: 20px;
+    font-weight: 250;
+}
+
+.principal__btn-inserir {
+    background: url(../img/mais.svg) no-repeat 5% 10px;
+}
+
+.principal__dropdown__container {
+    background: url(../img/dropdown-fechado.svg) no-repeat 95% 15px;
+}
+
+.principal__btn-inserir, .principal__dropdown__container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    background-color: var(--rosa-escuro);
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.principal__btn-inserir:hover, .principal__btn-inserir:focus {
+    background: url(../img/mais2.svg) no-repeat 5% 10px;
+    background-color: var(--rosa-queimado);
+    outline: none;
+}
+
+.principal__btn-inserir span, .principal__dropdown__container span {
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: 250;
+}
+.dropdown-active {
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
+}
+
+.principal__dropdown-lista {
+    background-color: var(--rosa-queimado);
+    padding: 16px 0 16px 0;
+    margin-bottom: 16px;
+    border-radius: 0 0 5px 5px;
+    columns: auto;
+    column-width: 230px;
+}
+
+.principal__dropdown-lista li {
+    background: no-repeat url(../img/Bolinha-dropdown.svg) 10px 6px;
+    margin: 0 16px 10px 16px;
+    padding: 0 0 5px 28px;
+    font-size: 17px;
+    border-bottom: 2px var(--rosa-queimado-claro) solid;
+}
+
+.principal__dropdown-lista li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.principal__galeria {
+    columns: auto;
+    column-width: 280px;
+    column-gap: 16px;
+}
+
+.principal__galeria img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+    border-radius: 2px;
+    transition: 500ms;
+}
+
+.principal__galeria img:hover, .principal__galeria img:focus {
+    filter: contrast(135%);
+    outline: none;
+}
+
+.principal__btn-topo {
+    background-color: var(--rosa-escuro2);
+    position: fixed;
+    right: 6%;
+    bottom: 5%;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* MEDIA: */
+@media only screen and (min-width: 640px) {
+    .principal__titulo {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    .principal__btn-inserir {
+        width: 10%;
+        height: 45px;
+        position: absolute;
+        right: 5%;
+        background: url(../img/mais.svg) no-repeat 50% 10px;
+        background-color: var(--rosa-escuro);
+    }
+
+    .principal__btn-inserir:hover, .principal__btn-inserir:focus {
+        background: url(../img/mais2.svg) no-repeat 50% 10px;
+        background-color: var(--rosa-queimado);
+    }
+
+    .principal__btn-inserir span {
+        display: none;
+    }
+
+    .principal__dropdown-lista {
+        background-color: transparent;
+        display: flex;
+        overflow-x: auto;
+        width: 86%;
+        padding-top: 0;
+    }
+
+    .principal__dropdown-lista::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .principal__dropdown-lista li {
+        border: none;
+        background: var(--rosa-escuro);
+        margin: 0 8px;
+        padding: 13px 24px;
+        color: var(--branco);
+        height: 45px;
+        border-radius: 5px;
+        font-weight: 300;
+        font-size: 17.5px;
+        white-space: nowrap;
+        transition: 500ms;
+    }
+
+    .principal__dropdown-lista li:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .principal__dropdown-lista li:hover, .principal__dropdown-lista li:focus {
+        background-color: var(--rosa-escuro2);
+        padding: 13px 32px;
+        outline: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .principal__titulo {
+        margin-bottom: 100px;
+    }
+
+    .principal__nome-artistico {
+        font-size: 40px;
+    }
+    
+    .principal__nome-artista {
+        font-size: 25px;
+    }
+}

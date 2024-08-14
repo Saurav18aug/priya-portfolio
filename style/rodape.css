@@ -1,0 +1,172 @@
+.rodape {
+    background-color: var(--rosa-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 48px;
+    border-radius: 16px 16px 0 0;
+    color: var(--branco);
+}
+
+.rodape__contatos {
+    width: 90%;
+    margin: 48px 15px 48px 15px;
+    border-bottom: 1.5px var(--rosa-queimado) solid;
+    padding-bottom: 32px;
+
+}
+
+.rodape__contatos-email h3 {
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+
+.rodape__contatos-email p,
+.rodape__contatos-redes p {
+    font-weight: 200;
+}
+
+.rodape__contatos-email p strong,
+.rodape__contatos-redes p strong {
+    font-weight: 500;
+    border-bottom: 2px var(--cor-background) solid;
+    padding-bottom: 2px;
+}
+
+.rodape__contatos-email button {
+    margin-top: 28px;
+    background-color: var(--cor-background);
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.rodape__contatos-email button:hover,
+.rodape__contatos-email button:focus {
+    padding: 8px 32px;
+    background-color: var(--rosa-queimado);
+    color: #000;
+    font-weight: 400;
+}
+
+.rodape__contatos div:nth-child(2) {
+    font-weight: 450;
+    font-size: 18px;
+}
+
+.rodape__contatos-redes {
+    margin-top: 40px;
+}
+
+.contatos-redes-img {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.contatos-redes-img img {
+    cursor: pointer;
+    outline: none;
+    transition: 500ms;
+}
+
+.contatos-redes-img img:hover,
+.contatos-redes-img img:focus {
+    outline: solid 1.5px var(--branco);
+    border-radius: 8px;
+    padding: 0 3.5px 0 3.5px;
+}
+
+.rodape__mapa-site {
+    border-bottom: 1.5px var(--rosa-queimado) solid;
+    padding-bottom: 40px;
+    width: 90%;
+}
+
+.rodape__mapa-site h3 {
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.rodape__mapa-site ul li {
+    font-weight: 250;
+    outline: none;
+    transition: 500ms;
+    position: relative;
+}
+
+.rodape__mapa-site ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.rodape__creditos {
+    margin: 40px 35px;
+}
+
+.rodape__desenvolvedor {
+    font-weight: 200;
+}
+
+.rodape__desenvolvedor a {
+    cursor: pointer;
+    font-weight: 500;
+    transition: 500ms;
+    position: relative;
+}
+
+.rodape__desenvolvedor a::after {
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-background);
+    bottom: -5px;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+
+.rodape__desenvolvedor a:hover::after {
+    width: 100%;
+}
+
+.rodape__mapa-site ul li:hover, .rodape__mapa-site ul li:focus, .rodape__desenvolvedor a:hover, .rodape__desenvolvedor a:focus{
+    font-size: 18px;
+}
+
+/* MEDIA: */
+@media only screen and (min-width: 850px) {
+    .rodape__contatos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        margin: 48px 0px 48px 0px;
+
+    }
+
+    .rodape__contatos-email{
+        width: 300px;
+    }
+
+    .rodape__contatos-email button {
+        margin-bottom: 0;
+    }
+
+    .rodape__contatos-redes {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .rodape__contatos{
+        gap: 18%;
+    }
+}

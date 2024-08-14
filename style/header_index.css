@@ -1,0 +1,184 @@
+.cabecalho {
+    display: flex;
+    justify-content: end;
+    padding: 40px 0;   
+    margin: 0 5%;
+}
+
+.cabecalho__nav {
+    background-color: var(--rosa-escuro);
+    height: 100vh;
+    position: fixed;
+    inset: 0 0 auto auto;
+    width: 65vw;
+    margin-right: -100vw;
+    padding: 32px 24px;
+    animation: 1s;
+    z-index: 200;
+}
+
+.cabecalho__nav__btn {
+    width: 32px;
+    transition: 500ms;
+    outline: none;
+}
+
+.cabecalho__nav__btn:focus,
+.cabecalho__nav__icone:focus {
+    width: 35px;
+}
+
+.cabecalho__nav__icone {
+    width: 30px;
+    transition: 500ms;
+    outline: none;
+    padding-bottom: 24px;
+}
+
+@keyframes showMenuMobile {
+    0% { margin-right: -100vw; }
+    100% { margin-right: 0; }
+}
+
+@keyframes closedMenuMobile {
+    0% { margin-right: 0; }
+    100% { margin-right: -100vw; }
+}
+
+.cabecalho__nav__titulo {
+    font-size: 32px;
+    color: var(--branco);
+    margin-bottom: 24px;
+    border-bottom: 2.5px var(--rosa-queimado-claro) solid;
+    border-radius: 2px;
+    padding-bottom: 5px;
+}
+
+.cabecalho__nav__lista li {
+    margin-bottom: 16px;
+    background: url(../img/Bolinha.svg) no-repeat 5px;
+    padding-left: 20px;
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: 300;
+    transition: 500ms;
+}
+
+.cabecalho__nav__lista li:focus, .cabecalho__nav__lista li:hover {
+    background-color: var(--rosa-escuro2);
+    padding: 5px 0 5px 32px;
+    border-radius: 5px;
+}
+
+.cabecalho__nav__btn-login {
+    width: 100%;
+    position: relative;
+    top: 40%;
+}
+
+.cabecalho__nav__btn-entrar, .cabecalho__nav__btn-sair {
+    background-color: var(--rosa-queimado-claro);
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: 300ms;
+}
+
+.cabecalho__nav__btn-entrar:hover, .cabecalho__nav__btn-sair:hover, .cabecalho__nav__btn-entrar:focus, .cabecalho__nav__btn-sair:focus {
+    background-color: var(--rosa-escuro2);
+    color: var(--branco);
+    font-weight: 250;
+    font-size: 18px;
+} 
+
+.cabecalho__nav__lista li.nav-ativo {
+    background-color: var(--rosa-escuro2);
+    padding: 5px 0 5px 32px;
+    border-radius: 5px;
+}
+
+/* MEDIA */
+@media only screen and (min-width: 640px) {
+    .cabecalho {
+        padding-bottom: 72px;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .cabecalho {
+        padding-bottom: 100px;
+    }
+
+    .cabecalho__nav__btn, .cabecalho__nav__icone, .cabecalho__nav__titulo {
+        display: none;
+    }
+
+    .cabecalho__nav {
+        margin-right: 0;
+        background-color: transparent;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        height: auto;
+        width: auto;
+        position: relative;
+    }
+
+    .cabecalho__nav__lista {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+    }
+
+    .cabecalho__nav__lista li {
+        background: none;
+        margin: 0;
+        height: auto;
+        position: relative;
+    }
+
+    .cabecalho__nav__lista li:focus, .cabecalho__nav__lista li:hover {
+        background-color: transparent;
+        padding: 0 0 0 20px;
+    }
+
+    .cabecalho__nav__lista li a {
+        position: relative;
+    }
+
+    .cabecalho__nav__lista li a::after {
+        content: " ";
+        width: 0%;
+        height: 2px;
+        background-color: var(--rosa-queimado);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: 500ms ease-in-out;
+    }
+
+    .cabecalho__nav__lista li a:hover::after {
+        width: 105%;
+    }
+
+    .cabecalho__nav__btn-login {
+        top: 0;
+        width: auto;
+        right: 0;
+        font-size: 18px;
+    }
+
+    .cabecalho__nav__btn-entrar, .cabecalho__nav__btn-sair {
+        padding: 5px 15px;
+    }
+
+    .cabecalho__nav__btn-entrar:hover, .cabecalho__nav__btn-sair:hover, .cabecalho__nav__btn-entrar:focus, .cabecalho__nav__btn-sair:focus {
+        background-color: var(--rosa-escuro2);
+        color: var(--branco);
+        font-weight: 300;
+    } 
+
+    .cabecalho__nav__lista li.nav-ativo {
+        padding: 8px 15px;
+    }
+}

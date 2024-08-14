@@ -1,0 +1,45 @@
+.principal__sobre{
+    margin-top: 48px;
+    width: 80%;
+}
+
+.principal__sobre-texto p{
+    text-align: justify;
+    color: var(--branco);
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    margin-bottom: 45px;
+}
+
+.principal__sobre-texto img{
+    float: right;
+    width: 150px;
+    border-radius: 8px;
+    margin-left: 20px;
+    transition: 500ms;
+}
+
+/* MEDIA: */
+@media only screen and (min-width: 600px){
+    .principal__sobre-texto img{
+        width: 210px;
+    } 
+    
+    .principal__sobre-texto p{
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (min-width: 730px){
+    .principal__sobre{
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .principal__sobre{
+        margin-top: 48px;
+        width: 70%;
+    }
+}
